@@ -26,6 +26,7 @@ export class AuthenticationMiddleware implements NestMiddleware {
           message,
         });
       }
+      console.log('Middleware up and running');
       next();
     });
   }
