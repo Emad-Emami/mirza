@@ -19,8 +19,8 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "@resources/*": ["src/*"],
-      "@middleware/*": ["middleware/*"],
-      "@pipes/*": ["pipes/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@pipes/*": ["src/pipes/*"],
     }
   },
   "exclude": [

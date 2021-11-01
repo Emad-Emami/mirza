@@ -6,9 +6,9 @@ import {
 } from '@nestjs/common';
 import { PostService } from './posts.service';
 import { PostController } from './posts.controller';
+import { AuthenticationMiddleware } from '@middlewares/authentication';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PostSchema, Post } from './entities/post.entity';
-import { AuthenticationMiddleware } from 'src/middleware/authentication';
 
 @Module({
   imports: [
