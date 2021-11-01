@@ -17,6 +17,11 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@resources/*": ["src/*"],
+      "@middleware/*": ["middleware/*"],
+      "@pipes/*": ["pipes/*"],
+    }
   },
   "exclude": [
     "node_modules",

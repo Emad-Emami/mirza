@@ -3,6 +3,10 @@ import clipboardy from 'clipboardy';
 import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
+import url from 'url';
+
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const options = {
   method: 'POST',
@@ -10,9 +14,7 @@ const options = {
   headers: { 'content-type': 'application/json' },
   body: '{"client_id":"tLLKmL6gArzAqkqEORNeUj9za4nQPWNr","client_secret":"cyiNP_KSoDp7dYgGMszOj_qwQUv4fTI46B63PRpYfEdtgVD1DqeNnQKK6oKriNH7","audience":"http://localhost:5000/api","grant_type":"client_credentials"}',
 };
-const __dirname = path.resolve();
-const tokenPath = __dirname + '/jwt-token.json';
-
+const tokenPath = path.join(__dirname, '/jwt-token.json');
 console.log(chalk.green('Start request...'));
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
