@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { PostSchema } from './entities/post.entity';
 import { PostService } from './posts.service';
 
 describe('PostService', () => {
@@ -6,7 +7,7 @@ describe('PostService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [PostService],
+      providers: [PostService, { provide: 'PostModel', useValue: PostSchema }],
     }).compile();
 
     service = module.get<PostService>(PostService);

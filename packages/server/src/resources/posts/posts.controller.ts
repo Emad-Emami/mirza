@@ -14,7 +14,7 @@ import { PostService } from './posts.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { ObjectId } from 'mongoose';
-import { ValidateObjectId } from '@pipes/validate-object-id';
+import { ValidateObjectId } from '../../pipes/validate-object-id';
 
 @Controller('posts')
 export class PostController {
